@@ -18,7 +18,7 @@ const NodeListOnly = () => {
   const [filter, setFilter] = useState(null);
 
   useEffect(() => {
-    const API_ROOT = '/DrupalAgain/web/jsonapi/';
+    const API_ROOT = '/Drupal-React-Prototype/web/jsonapi/';
     const url = `${API_ROOT}node/article?fields[node--article]=id,drupal_internal__nid,title,body&sort=-created&page[limit]=10`;
 
     const headers = new Headers({
