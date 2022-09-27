@@ -12,11 +12,14 @@
  */
 
 export const fetchWithCSRFToken = (csrfUrl, fetchUrl, fetchOptions) => {
-  if(!fetchOptions.headers.get('X-CSRF-Token')){
+  if(fetchOptions.headers.get('X-CSRF-Token') == null){
+    console.log(true);
+    console.log(fetchOptions.headers.get('X-CSRF-Token'));
     return fetch(csrfUrl)
       .then(response => response.text())
       .then((csrfToken) => {
-        fetchOptions.headers.append('X-CSRF_Token', csrfToken);
+        fetchOptions.headers.append('X-CSRF-Token', csrfToken);
+        console.log(fetchOptions.headers.get('X-CSRF-Token'));
         return fetch(fetchUrl, fetchOptions);
       });
   }

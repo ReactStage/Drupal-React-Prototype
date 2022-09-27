@@ -7,8 +7,8 @@ const NodeDelete = ({ id, title, onSuccess }) => {
   }
 
   function doDelete() {
-    const csrfUrl = `/session/token?_format=json`;
-    const fetchUrl = `/jsonapi/node/article/${id}`;
+    const csrfUrl = `/Drupal-React-Prototype/web/session/token?_format=json`;
+    const fetchUrl = `/Drupal-React-Prototype/web/jsonapi/node/article/${id}`;
     const fetchOptions = {
       method: 'DELETE',
       credentials: 'same-origin',

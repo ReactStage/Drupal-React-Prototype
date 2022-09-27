@@ -6,7 +6,7 @@ console.log(window.React1 === window.React2);
 
 const NodeItem = ({drupal_internal__nid, title}) => (
   <div>
-    <a href={`/node/${drupal_internal__nid}`}>{title}</a>
+    <a href={`/Drupal-React-Prototype/web/node/${drupal_internal__nid}`}>{title}</a>
   </div>
 );
 const NoData = () => (
